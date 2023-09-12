@@ -27,7 +27,7 @@ jobs:
       - name: Build and Push docker image
         run: |
           echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME}} --password-stdin
-          docker build -f Dockerfile -t vkumar2/weather-service:v1 .
+          docker build -f Dockerfile -t vishali07/weather-service:v1 .
           docker push ${{ secrets.DOCKERHUB_USERNAME}}/weather-service --all-tags
 
 
